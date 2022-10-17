@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Carrito compras</title>
+</head>
+
+<body>
+
+  <header class="header container-fluid position-fixed-top top-0">
+    <nav class="menu">
+      <a href="#"><img src="./img/logos/logo.jpg" alt="logo"></a>
+      <ul class="nav nav-pills mb-3 container" id="pills-tab" role="tablist">
+        
+        <li class="nav-item " role="presentation">
+          <a class="nav-link id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+            type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Productos</a>
+        </li>
+        <li class="nav-item " role="presentation">
+          <a class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button"
+            role="tab" aria-controls="pills-contact" aria-selected="false">Carrito</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <h1>hola</h1>
+      </div>
+
+      <div class="tab-pane fade show active container section" id="pills-profile" role="tabpanel"
+        aria-labelledby="pills-profile-tab">
+        <h1>Nuestros Productos</h1>
+        <div class="row" id="todosProductos">
+
+        </div>
+        
+      </div>
+
+      <div class="tab-pane fade carrito" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+        <br>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" class="tabProd">Producto Nro</th>
+              <th scope="col" class="tabNombre">Nombre</th>
+              <th scope="col" class="tabCant">Cantidad</th>
+              <th scope="col" class="tabAcc">Acción</th>
+              <th scope="col" class="tabTotal">Total</th>
+            </tr>
+          </thead>
+          <tbody id="items"></tbody>
+          <tfoot>
+            <tr id="total-carrito">
+              <th scope="row" colspan="5" class="tabCarro">Carrito vacío - comience a comprar!</th>
+            </tr>
+          </tfoot>
+        </table>
+        <div id="imgCarro">
+          <img src="./img/logos/carrito-de-compras.png" alt="carro">
+        </div>
+      </div>
+    </div>
+</main>
+
+<footer class="footer p-3 mt-5">
+  <p class="text-center m-0 text-muted">Village siempre te acompaña</p>
+</footer>
+
+
+
+  <template id="template-card">
+    <div class="col-12 mb-2 col-md-4 ">
+      <div class="card">
+        <img src="" alt="" class="card-img-top">
+        <div class="card-body">
+          <h5>Titulo</h5>
+          <p>precio</p>
+          <button class="btn  comprar">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </template>
+
+
+  <template id="template-carrito">
+    <tr>
+      <th scope="row" class="tabProd">id</th>
+      <td class="tabNombre">Café</td>
+      <td class="tabCant">1</td>
+      <td class="tabAcc">
+        <button class="btn btn-info btn-sm aumentar">
+          +
+        </button>
+        <button class="btn btn-danger btn-sm disminuir">
+          -
+        </button>
+      </td>
+      <td class="tabTotal">$ <span class="tabCarro">500</span></td>
+    </tr>
+  </template>
+
+  <template id="template-total-carrito">
+    <th scope="row" colspan="2" class="tabCarro">Total productos</th>
+    <td>10</td>
+    <td>
+      <button class="btn btn-danger btn-sm tabCarro"  id="vaciar-carrito">
+        vaciar todo
+      </button>
+    </td>
+    <td class="font-weight-bold tabCarro">$ <span class="tabCarro">5000</span></td>
+  </template>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./app.js"></script>
+</body>
+
+</html>

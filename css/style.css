@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    
+    background-color: #9a8c98;
+
+}
+.header .menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.header ul{
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 10px;
+}
+.header .menu img{
+    width: 4em;
+    border-radius: 75%;
+}
+
+.header ul a{
+    font-size: 14px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #22223b;
+}
+.nav-pills .nav-link.active{
+    background-color: #4a4e69  !important;
+}
+.section{
+    background-color: #f2e9e4;
+}
+
+main h1{
+    padding: 15px;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(0, 0, 0, 0.801);
+}
+.card{
+    margin: 15px 0 15px 0;
+}
+.card-body{
+    background-color:#4a4e69ab;
+    
+}
+.card-body button{
+    background-color: #22223b;
+    color: white;
+    
+}
+.table{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+    background-color: #c9ada72c ;
+}
+.tabProd, .tabNombre, .tabCant, .tabAcc, .tabTotal{
+    width: 75px;
+    font-size: 12px;
+}
+.tabCarro{
+    font-size: 15px;
+}
+#vaciar-carrito{
+    font-size: 10px;
+}
+#imgCarro{
+    display: flex;
+    justify-content: center;
+}
+#imgCarro img{
+    width: 70%;
+    opacity: 0.3;
+}
+.footer{
+    background-color:#c9ada7 ;
+}
+
+@media(min-width:1024px){
+    .header .menu img{
+        width: 6em;
+    }
+    .header ul a{
+        font-size: 25px;
+        font-weight: bold;
+      
+    }
+    main h1{
+        padding: 30px;
+    }
+    
+    .card{
+        margin: 20px 20px 20px 20px;
+        
+    }
+    .tabProd, .tabNombre, .tabCant, .tabAcc, .tabTotal{
+        width: 100px;
+        font-size: 25px;
+    }
+    .tabCarro{
+        font-size: 20px;
+    }
+    
+    #vaciar-carrito{
+        font-size: 16px;
+    }
+    #imgCarro img{
+        width: 35%;
+        margin: 15px;
+        
+    }
+    
+}
